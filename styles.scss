@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+* {
+    padding: 0;
+    margin: 0 5px;
+    box-sizing: border-box;
+
+    body {
+        font-family: "Inter", sans-serif;
+    }
+}
+#size {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__name {
+            font-size: 2.5vw;
+        }
+
+        &__menus {
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 3rem;
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+
+        &__image {
+            width: 50%;
+            background-image: url("images/Portrait.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        &__text {
+            width: 50%;
+            text-align: center;
+            display: grid;
+            place-content: center;
+
+            h1 {
+                font-size: 4vw;
+            }
+            h3 {
+                font-size: 3vw;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        gap: 30px;
+
+        [class^="footer__"] {
+            img {
+                width: 3.5vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        &__header {
+            justify-content: center;
+
+            &__name {
+                font-size: 5vw;
+                justify-content: center;
+            }
+
+            &__menus {
+                display: none;
+            }
+        }
+
+        &__main {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &__image {
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                background-size: 100%;
+                background-position: center;
+            }
+
+            &__text {
+                width: 100%;
+                padding-top: 20px;
+
+                h1 {
+                    display: none;
+                }
+
+                h3 {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &__footer {
+            [class^="footer__"] {
+                img {
+                    width: 5.5vw;
+                }
+            }
+        }
+    }
+}

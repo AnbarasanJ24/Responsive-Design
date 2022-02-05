@@ -33,3 +33,12 @@ Min-width
 
 Desktop First Approach => Bigger screen at the first then the smaller one
 Mobile First Appraoch => Smaller screen first then the smaller one 
+
+Landscape & Potrait 
+
+@media all and (orientation: landscape) {
+   // Styles for landscape mode.
+}
+@media all and (orientation: portrait) {
+   // Styles for portrait mode.
+}
